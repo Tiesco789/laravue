@@ -34,6 +34,10 @@ Route::get('/route2', function () {
 
 // Route::redirect('/route2', '/route1');
 
+Route::fallback(function() {
+    echo 'This route does not exist, <a href="'.route('site.index').'">click here</a> to go back to the main page';
+});
+
 // Nome, categoria, assunto mensagem
 // Route::get(
 //     '/contato/{nome}/{categoria_id}',
