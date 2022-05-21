@@ -13,15 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PrincipalController@principal');
-Route::get('/contato', 'ContatoController@contato');
-Route::get('/sobre-nos', 'SobreNosController@sobreNos');
-Route::get('/login', function () { return 'Login'; });
+Route::get('/', 'MainController@main')->name('site.index');
+Route::get('/about-us', 'AboutUsController@aboutUs')->name('site.about-us');
+Route::get('/contact', 'ContactController@contact')->name('site.contact');
+Route::get('/login', function () { return 'Login'; })->name('site.login');
 
 Route::prefix('/app')->group(function () {
-    Route::get('/clientes', function () { return 'clientes'; });
-    Route::get('/fornecedores', function () { return 'Fornecedores'; });
-    Route::get('/produtos', function () { return 'Produtos'; });
+    Route::get('/customers', function () { return 'Customers'; })->name('app.customers');
+    Route::get('/providers', function () { return 'providers'; })->name('app.providers');
+    Route::get('/products', function () { return 'Products'; })->name('app.products');
 });
 
 // Nome, categoria, assunto mensagem
