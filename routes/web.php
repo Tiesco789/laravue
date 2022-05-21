@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PrincipalController@principal');
+
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+
 Route::get('/contato', 'ContatoController@contato');
+// Nome, categoria, assunto mensagem
+
+Route::get(
+    '/contato/{nome}/{categoria}/{assunto}/{mensagem}',
+    function(string $nome, string $categoria, string $assunto, string $mensagem) {
+    echo "we are here: $nome - $categoria - $assunto - $mensagem";
+});
