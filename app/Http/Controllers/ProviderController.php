@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class ProviderController extends Controller
 {
     public function provider() {
-        $providers = ['provider 1'];
+        $providers = [
+            0 => ['name' => 'provider 1', 'status' => 'N']
+        ];
         return view('app.provider.index', compact('providers'));
 
     }
