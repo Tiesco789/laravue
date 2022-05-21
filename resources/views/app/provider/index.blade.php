@@ -1,11 +1,9 @@
-<h3>Fornecedor</h3>
+<h3>Provider</h3>
 
-{{-- Fica o comentario que sera descartado pelo interpretador do blade --}}
-
-@php
-    // Para comentarios de uma linha
-    /*
-        Para comentarios de varias linhas
-    */
-    */
-@endphp
+@if(count($providers) > 0 && count($providers) < 10)
+    <h3>Some providers was found</h3>
+@elseif(count($providers) > 10)
+    <h3>Many providers was found</h3>
+@else
+    <h3>No providers was found</h3>
+@endif
