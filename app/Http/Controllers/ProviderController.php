@@ -30,7 +30,7 @@ class ProviderController extends Controller
                 'tel' => '0000-0000'
             ],
         ];
-
+        $providers = [];
         return view('app.provider.index', compact('providers'));
 
     }

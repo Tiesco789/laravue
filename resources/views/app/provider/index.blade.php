@@ -1,7 +1,7 @@
 <h3>Provider</h3>
 
 @isset($providers)
-    @foreach ($providers as $index => $provider)
+    @forelse ($providers as $index => $provider)
 
         Provider: {{ $provider['name'] }}
         <br />
@@ -11,6 +11,8 @@
         <br />
         Telephone: {{ $provider['ddd'] ?? '' }} {{ $provider['tel'] ?? '' }}
         <hr />
-    @endforeach
+    @empty
+        Provider does not exist
+    @endforelse
 
 @endisset
