@@ -3,13 +3,13 @@
 @isset($providers)
     @forelse ($providers as $index => $provider)
 
-        Provider: {{ $provider['name'] }}
+        Provider: @{{ $provider['name'] }}
         <br />
-        Status: {{ $provider['status'] }}
+        Status: @{{ $provider['status'] }}
         <br />
-        CNPJ: {{ $provider['cnpj'] ?? 'Data was not fullfilled' }}
+        CNPJ: @{{ $provider['cnpj'] ?? 'Data was not fullfilled' }}
         <br />
-        Telephone: {{ $provider['ddd'] ?? '' }} {{ $provider['tel'] ?? '' }}
+        Telephone: @{{ $provider['ddd'] ?? '' }} @{{ $provider['tel'] ?? '' }}
         <hr />
     @empty
         Provider does not exist
