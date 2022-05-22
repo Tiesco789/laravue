@@ -7,5 +7,8 @@
     <br />
     @isset($providers[0]['cnpj'])
         CNPJ: {{ $providers[0]['cnpj'] }}
+        @empty($providers[0]['cnpj'])
+            - Empty
+        @endempty
     @endisset
 @endisset
