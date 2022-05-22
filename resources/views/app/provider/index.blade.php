@@ -5,10 +5,5 @@
     <br />
     Status: {{ $providers[0]['status'] }}
     <br />
-    @isset($providers[0]['cnpj'])
-        CNPJ: {{ $providers[0]['cnpj'] }}
-        @empty($providers[0]['cnpj'])
-            - Empty
-        @endempty
-    @endisset
+    CNPJ: {{ $providers[1]['cnpj'] ?? 'Data was not fullfilled' }}
 @endisset
