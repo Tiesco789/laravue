@@ -1,16 +1,16 @@
 <h3>Provider</h3>
 
 @isset($providers)
-    @php $i = 0 @endphp
-    @while (isset($providers[$i]))
-        Provider: {{ $providers[$i]['name'] }}
+    @foreach ($providers as $index => $provider)
+
+        Provider: {{ $provider['name'] }}
         <br />
-        Status: {{ $providers[$i]['status'] }}
+        Status: {{ $provider['status'] }}
         <br />
-        CNPJ: {{ $providers[$i]['cnpj'] ?? 'Data was not fullfilled' }}
+        CNPJ: {{ $provider['cnpj'] ?? 'Data was not fullfilled' }}
         <br />
-        Telephone: {{ $providers[$i]['ddd'] ?? '' }} {{ $providers[$i]['tel'] ?? '' }}
+        Telephone: {{ $provider['ddd'] ?? '' }} {{ $provider['tel'] ?? '' }}
         <hr />
-    @php $i++ @endphp
-    @endwhile
+    @endforeach
+
 @endisset
