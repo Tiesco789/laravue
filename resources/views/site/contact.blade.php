@@ -1,5 +1,6 @@
 @extends('site.layouts.basic')
 
+@section('title', $title)
 @section('content')
     <div class="topo">
         <div class="logo">
