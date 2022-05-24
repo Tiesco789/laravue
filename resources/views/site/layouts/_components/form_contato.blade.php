@@ -3,9 +3,9 @@
 
 <form action="{{ route('site.contact') }}" method="POST">
     @csrf
-    <input name="npme" type="text" placeholder="Nome" class="{{ $classe }}">
+    <input name="nome" type="text" placeholder="Nome" class="{{ $classe }}">
     <br>
-    <input name="tel" type="text" placeholder="Telefone" class="{{ $classe }}">
+    <input name="telefone" type="text" placeholder="Telefone" class="{{ $classe }}">
     <br>
     <input name="email" type="text" placeholder="E-mail" class="{{ $classe }}">
     <br>
